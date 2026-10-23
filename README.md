@@ -1,4 +1,6 @@
-# forge-sim
+# forge-simulator
+
+[![npm version](https://img.shields.io/npm/v/forge-simulator.svg)](https://www.npmjs.com/package/forge-simulator) [![npm downloads](https://img.shields.io/npm/dm/forge-simulator.svg)](https://www.npmjs.com/package/forge-simulator)
 
 Balance your game's forge and gacha economy **with numbers, before you ship**:
 Monte Carlo simulation plus exact math for crafting systems with escalating
@@ -20,14 +22,14 @@ Forge and gacha systems *feel* impossible to tune by gut:
   per item, and what share of players hit pity?
 
 Guessing wrong in either direction is expensive: too generous and your
-economy inflates, too stingy and players churn. forge-sim answers these
+economy inflates, too stingy and players churn. forge-simulator answers these
 questions in milliseconds, with exact math where exact math exists and
 seeded Monte Carlo everywhere else.
 
 ## Install
 
 ```bash
-npm install forge-sim
+npm install forge-simulator
 ```
 
 Or clone this repo and import `src/index.js` directly — there are no
@@ -38,7 +40,7 @@ dependencies to install.
 ### Forge: which stop-profit strategy wins?
 
 ```js
-import { simulateForge } from 'forge-sim';
+import { simulateForge } from 'forge-simulator';
 
 for (const k of [8, 12, 16]) {
   const r = simulateForge({ stopAtHammers: k }, 10000, 42);
@@ -60,7 +62,7 @@ const r = simulateForge(
 ### Gacha: exact math first, simulation as a cross-check
 
 ```js
-import { gachaExact, simulateGacha } from 'forge-sim';
+import { gachaExact, simulateGacha } from 'forge-simulator';
 
 const exact = gachaExact(0.006, 90);       // 0.6% rate, hard pity at 90
 console.log(exact.expectedPulls);          // ~69.7 pulls per item
@@ -121,7 +123,7 @@ exact vs simulated expected pulls for a 0.6% / 90-pity banner.
 
 ## 中文说明
 
-**forge-sim 解决什么问题：** 铸剑、强化、抽卡这类系统的数值靠感觉调必翻车。
+**forge-simulator 解决什么问题：** 铸剑、强化、抽卡这类系统的数值靠感觉调必翻车。
 这个库让你在上线前先算清楚：
 
 - 铸造系统：每锤价值涨幅随机、碎裂风险逐锤递增，玩家在第 K 锤收手
@@ -143,7 +145,7 @@ exact vs simulated expected pulls for a 0.6% / 90-pity banner.
 
 ## Related
 
-forge-sim was born from balancing
+forge-simulator was born from balancing
 **Master Swordsmith (铸剑大师)**, a ForgeTax-style WeChat mini-game about
 hammering swords under escalating fracture risk and periodic tax rounds:
 knowing exactly when a rational player should stop hammering is the whole

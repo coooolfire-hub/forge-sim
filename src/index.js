@@ -1,4 +1,4 @@
-// forge-sim: probability toolkit for game developers.
+// forge-simulator: probability toolkit for game developers.
 // Monte Carlo + exact-math simulation of forge/crafting systems with
 // escalating fracture risk, and gacha pulls with a hard pity.
 // Zero dependencies. Seeded RNG everywhere, so results are reproducible.

@@ -1,4 +1,4 @@
-// forge-sim CLI demo: compare stop-profit strategies for the forge,
+// forge-simulator CLI demo: compare stop-profit strategies for the forge,
 // then cross-check exact gacha math against Monte Carlo.
 // Run with: node examples/cli.js
 
